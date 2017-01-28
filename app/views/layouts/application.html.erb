@@ -8,14 +8,25 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 <body>
+  <% if notice %>
+    <div id="notice_wrapper">
+      <p class="notice"><%= notice %></p>
+    </div>
+  <% elsif alert %>
+    <div id="notice_wrapper">
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+
  	<header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
-      <div class="containter">
-        <div id="logo" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
+      <div class="container">
+        <div id="logo" class="navbar-brand"><%= link_to image_tag("logos/AW_logo_circle.png", size: "50x50"), root_path %></div>
+        <div id="site-title" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? %>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to('Profile', edit_user_registration_path) %></li>
+              <li><%= link_to("Profile", edit_user_registration_path) %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
             </ul>
           <% else %>
@@ -28,18 +39,19 @@
       </div>
     </div>
   </header>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<% if user_signed_in? %>
+<div class="jumbotron">
+  <h1>Welcome Back to Andy in SF</h1>
+</div>
+<% else %>
+<div class="jumbotron">
+  <h1>Welcome to Andy in SF</h1> 
+  <p>This is a blog about Andy's life in San Francisco, California. Andy made this blog from scratch using the finest organic, free-range, paleo, gluten free code. Hope you enjoy!</p> 
+</div>
+<% end %>
 
   <div id="main" class="container">
-    <% flash.each do |name, msg| %>
-      <% content_tag(:div, msg, class: "alert alert-#{name}") %>
-      <% end %> 
-
-      <div id="container" class="col-md-9 center-block">
         <%= yield %>
-      </div> 
   </div>
 
 </body>

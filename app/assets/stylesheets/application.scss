@@ -16,3 +16,49 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#notice_wrapper {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background: #C4C4C4;
+	opacity: 0.85;
+	.alert, .notice {
+		padding: 2.5rem 0;
+		text-align: center;
+		margin: 0;
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #000000;
+		letter-spacing: 1px;
+	}
+}
+
+#logo {
+	margin: 0;
+	padding: 0;
+}
+
+#site-title {
+	color: #F0F0F0;
+	a:link, a:visited, a:hover, a:active, {
+		color: #F0F0F0;
+	}
+}
+
+.navbar.navbar-default {
+	background-color: #2B2B2B;
+	padding: 1rem 0;
+	
+}
+
+.nav.navbar-nav.navbar-right {
+	a:link, a:visited, a:active, {
+		color: #F0F0F0;
+	}
+	a:hover {
+		color: #C4C4C4;
+		text-decoration: underline;
+	}
+}
