@@ -7,22 +7,40 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+<body>
+ 	<header class="navbar navbar-default" role="navigation">
+    <div class="navbar-inner">
+      <div class="containter">
+        <div id="logo" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+          <% if user_signed_in? %>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to('Profile', edit_user_registration_path) %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+            </ul>
+          <% else %>
+            <ul class="nav navbar-nav pull-right">
+              <li><%= link_to('Sign Up', new_user_registration_path)  %></li>
+              <li><%= link_to "Sign In",  new_user_session_path %></li>
+            </ul>
+          <% end %>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  <body>
- 	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
- 	<%= link_to "Home", root_path %>
-  <% if user_signed_in? %>
-    <%= link_to('Edit Profile', edit_user_registration_path) %>
-  <% else %>
-    <%= link_to('Sign Up', new_user_registration_path)  %>
-  </li>
-<% end %>
-  <% if user_signed_in? %>
-    <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign In",  new_user_session_path %>
-  <% end %>
-    <%= yield %>
-  </body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div id="main" class="container">
+    <% flash.each do |name, msg| %>
+      <% content_tag(:div, msg, class: "alert alert-#{name}") %>
+      <% end %> 
+
+      <div id="container" class="col-md-9 center-block">
+        <%= yield %>
+      </div> 
+  </div>
+
+</body>
 </html>
