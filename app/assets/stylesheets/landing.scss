@@ -19,3 +19,23 @@
 		color: #696969;
 	}
 }
+
+.post_title {
+	font-size: 25px;
+	font-weight: 400;
+	a:link, a:visited, a:hover, a:active, {
+		color: #000000;
+	}
+}
+
+.post_body {
+
+	text-align: justify;
+	font-style: italic;
+	font-size: 14px;
+	a:link, a:visited, a:hover, a:active, {
+		color: #696969;
+	}
+}
+
+tr:hover {background-color: #9C9C9C}

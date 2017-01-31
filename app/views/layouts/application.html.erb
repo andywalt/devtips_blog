@@ -21,7 +21,7 @@
  	<header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to image_tag("logos/AW_logo_circle.png", size: "50x50"), root_path %></div>
+        <div id="logo" class="navbar-brand"><%= link_to image_tag("logos/AW_logo_circle_hover.png", size: "50x50"), new_user_session_path %></div>
         <div id="site-title" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? %>
@@ -32,9 +32,9 @@
             </ul>
           <% else %>
             <ul class="nav navbar-nav pull-right">
-              <li><%= link_to('Sign Up', new_user_registration_path)  %></li>
+              <!-- <li><%= link_to('Sign Up', new_user_registration_path)  %></li>
               <li><%= link_to "Sign In",  new_user_session_path %></li>
-            </ul>
+            </ul> -->
           <% end %>
         </nav>
       </div>
