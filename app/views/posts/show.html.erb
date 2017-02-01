@@ -1,6 +1,6 @@
 <h1><%= @post.title %></h1>
 
-<div><%= @post.body %></div>
+<div><%= simple_format(@post.body) %></div>
 
 <div class="post_navigation_links">
 	<% if user_signed_in? %>

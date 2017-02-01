@@ -33,7 +33,7 @@
 				<% end %>
 			</tr>
 			<tr>
-				<td class="post_body"><%= truncate(post.body, :length => 250) %></td>
+				<td class="post_body"><%= truncate(post.body, :length => 320, :omission => "...") %></td>
 				<td></td>
 				<% if post.user == current_user %>
 					<td class="crud_links"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
