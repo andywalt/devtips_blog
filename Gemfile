@@ -58,3 +58,5 @@ group :production do
 end
 
 gem 'devise', '~> 4.2'
+
+gem 'acts_as_votable', '~> 0.10.0'

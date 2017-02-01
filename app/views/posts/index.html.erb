@@ -8,8 +8,9 @@
 
 <div class="container">
 	<table class="table table-hover">
-		<thead>
+		<thead class="blog_table">
 			<tr>
+				<th></th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -19,12 +20,21 @@
 			<% @posts.each do |post| %>
 			<tr>
 				<td class="post_title"><%= link_to post.title, post %></td>
+				<div class="btn-group">
+					<td>
+						<%= link_to like_post_path(post), method: :put, class: "btn btn-default btn-sm" do %>
+						<span class="glyphicon glyphicon-thumbs-up"></span>
+							<%= post.get_upvotes.size %>
+						<% end %>
+					</td>
+				</div>
 				<% if post.user == current_user %>
 					<td class="crud_links"><%= link_to 'Edit', edit_post_path(post) %></td>
 				<% end %>
 			</tr>
 			<tr>
 				<td class="post_body"><%= truncate(post.body, :length => 250) %></td>
+				<td></td>
 				<% if post.user == current_user %>
 					<td class="crud_links"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				<% end %>
