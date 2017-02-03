@@ -1,5 +1,7 @@
 <h1><%= @post.title %></h1>
 
+<%= image_tag @post.image.url(:medium) %>
+
 <div><%= simple_format(@post.body) %></div>
 
 <div class="post_navigation_links">

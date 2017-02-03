@@ -13,12 +13,14 @@
 				<th></th>
 				<th></th>
 				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<% @posts.each do |post| %>
 			<tr>
+				<td><%= image_tag post.image.url(:thumb), class:"post_thumb" %></td>
 				<td class="post_title"><%= link_to post.title, post %></td>
 				<div class="btn-group">
 					<td>
@@ -33,6 +35,7 @@
 				<% end %>
 			</tr>
 			<tr>
+				<td></td>
 				<td class="post_body"><%= truncate(post.body, :length => 320, :omission => "...") %></td>
 				<td></td>
 				<% if post.user == current_user %>

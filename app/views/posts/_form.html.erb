@@ -1,9 +1,13 @@
-<%= form_for @post do |f| %>
+<%= form_for @post, html: { multipart: true } do |f| %>
+	<div class="form_group">
+		<label for="image"><%= f.label :image %><br></label>
+		<%= f.file_field :image, class: "form-control" %><br>
+	</div><br>
+
 	<div class="form_group">
 		<label for="title"><%= f.label :title %><br></label>
 		<%= f.text_field :title, placeholder: "Make It Witty", class: "form-control" %><br>
 	</div>
-		<br>
 	<div class="form_group">
 		<label for="body"><%= f.label :body %><br></label>
 		<%= f.text_area :body, placeholder: "Don't Cuss", class: "form-control" %><br>
