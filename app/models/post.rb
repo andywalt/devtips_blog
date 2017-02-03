@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
 	has_attached_file :image, styles: { large: "800x800>", medium: "400x400>", thumb: "150x150#" }
-	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/, :size => { :in => 0..3000.kilobytes }
 
 	acts_as_votable
 
