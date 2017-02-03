@@ -50,6 +50,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
 	gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 group :production do
@@ -60,3 +61,5 @@ end
 gem 'devise', '~> 4.2'
 
 gem 'acts_as_votable', '~> 0.10.0'
+
+gem 'paperclip', '~> 5.1'
