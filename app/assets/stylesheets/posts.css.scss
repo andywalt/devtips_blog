@@ -1,11 +1,15 @@
-.jumbotron {
-	h1 {
-		padding-left: 40px;
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post_navigation_links {
+	a:link, a:visited, a:hover, a:active, {
+		color: #303030;
 	}
-	p {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
+}
+
+.col-xs-1 {
+	padding-top: 20px;
 }
 
 .new_post {

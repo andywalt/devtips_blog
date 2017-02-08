@@ -1,0 +1,26 @@
+
+#landing_banner {
+	background-image: image-url('birdsandbridges_banner.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	h1 {
+		padding-top: 50px;
+		padding-left: 40px;
+	}
+	h5 {
+		width: 480px;
+		margin-top: -5px;
+		font-style: italic;
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 15px;
+	}
+}
+
+.wrapper {
+	width: 1440px;
+	max-width: 90%;
+	margin: 0;
+	margin-top: -20px;
+}

@@ -50,6 +50,7 @@
 .navbar.navbar-default {
 	background-color: #2B2B2B;
 	padding: 1rem 0;
+	margin: 0;
 	
 }
 
@@ -65,4 +66,30 @@
 
 #avatar-thumb {
 	max-width: 50px;
+}
+
+.row {
+	background-color: #2B2B2B;
+	padding: 2rem 0;
+	text-align: center;
+	a:link, a:visited, a:active, {
+		color: #F0F0F0;
+	}
+	a:hover {
+		color: #C4C4C4;
+		text-decoration: underline;
+	}
+}
+
+.row.footer_rights {
+	margin-top: -5px;
+	color: #F0F0F0;
+	text-align: center;
+	a:link, a:visited, a:active, {
+		color: #C4C4C4;
+		text-decoration: underline;
+	}
+	a:hover {
+		color: #F0F0F0;
+	}
 }

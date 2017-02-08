@@ -41,20 +41,20 @@
       </div>
     </div>
   </header>
-<% if user_signed_in? %>
-<div class="jumbotron">
-  <h1>Welcome Back to Andy in SF</h1>
-</div>
-<% else %>
-<div class="jumbotron">
-  <h1>Welcome to Andy in SF</h1> 
-  <p>This is a blog about Andy's life in San Francisco, California. Andy made this blog from scratch using the finest organic, free-range, paleo, gluten free code. Hope you enjoy!</p> 
-</div>
-<% end %>
+
+  <div class="bannerhelp">
+    <%= render 'layouts/landing' %>
+  </div>
+
 
   <div id="main" class="container">
         <%= yield %>
   </div>
+
+  <div>
+    <%= render 'layouts/footer' %>
+  </div>
+
 
 </body>
 </html>

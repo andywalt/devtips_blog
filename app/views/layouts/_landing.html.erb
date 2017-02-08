@@ -1,0 +1,12 @@
+<section id="landing_banner">
+	<% if user_signed_in? %>
+	<div class="wrapper">
+	  <h1>Welcome Back, @<%= current_user.username %>!</h1>
+	</div>
+	<% else %>
+	<div class="wrapper">
+	  <h1>Welcome to Andy in SF</h1> 
+	  <h5>This is a blog about Andy's life in San Francisco, CA. Andy made this blog from scratch using the finest organic, free-range, paleo, gluten free code. <br> Hope you enjoy!</h5> 
+	</div>
+	<% end %>
+</section>
