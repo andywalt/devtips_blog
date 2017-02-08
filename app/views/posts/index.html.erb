@@ -1,7 +1,7 @@
 <h1>Blog</h1>
 
 <div class="new_post">
-	<% if user_signed_in? %>
+	<% if current_user.try(:admin?) %>
 	<h2><%= link_to "New Post", new_post_path %></h2>
 	<% end %>
 </div>
