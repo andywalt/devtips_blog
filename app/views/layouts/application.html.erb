@@ -18,14 +18,23 @@
     </div>
   <% end %>
 
- 	<header class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to image_tag("logos/AW_logo_circle_hover.png", size: "50x50"), root_path %></div>
+ 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-inner">
+        <div id="logo" class="navbar-brand hidden-xs"><%= link_to image_tag("logos/AW_logo_circle_hover.png", size: "50x50"), root_path %></div>
         <div id="site-title" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="navbar-header navbar-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse">
           <% if user_signed_in? %>
-            <ul class="nav navbar-nav navbar-right nav-pills">
+            <ul class="nav navbar-nav navbar-right nav-pills pull-right">
               <li id="avatar-thumb"><%= image_tag current_user.avatar(:thumb), class:"img-responsive img-circle" %></li>
               <li><%= link_to current_user.username %></li>
               <li id="fat-menu" class="dropdown">
@@ -44,10 +53,10 @@
               <li><%= link_to "Sign In",  new_user_session_path %></li>
             </ul>
           <% end %>
-        </nav>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
   <div class="bannerhelp">
     <% if current_page?(root_path) %>

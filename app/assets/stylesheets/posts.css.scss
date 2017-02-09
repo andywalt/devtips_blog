@@ -27,6 +27,7 @@
 .post_title {
 	font-size: 25px;
 	font-weight: 400;
+	text-align: center;
 	a:link, a:visited, a:hover, a:active, {
 		color: #000000;
 	}
@@ -52,7 +53,15 @@ tr:hover {background-color: #9C9C9C}
 	max-width: 50px;
 }
 
-.post_image {
+#post_title {
+	text-align: center;
 	padding-top: 20px;
-	width: 100%;
+}
+
+#post_header_image {
+	padding-top: 30px;
+}
+
+#post_body {
+	text-align: justify;
 }

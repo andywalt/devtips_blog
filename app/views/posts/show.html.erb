@@ -1,18 +1,30 @@
-<div class="containter">
-	<div class="post_image">
-		<%= image_tag @post.image.url(:medium) %>
+<div class="container">
+	<div class="row">
+		<div>
+			<%= image_tag @post.image.url(:medium), class: "img-responsive center-block", id: "post_header_image" %>
+		</div>
 	</div>
-</div>
-
-<h1><%= @post.title %></h1>
-
-<div><%= simple_format(@post.body) %></div>
-
-<div class="post_navigation_links">
-	<% if current_user.try(:admin?) %>
-		<%= link_to "Edit Post", edit_post_path(@post) %>
-		<%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
-	<% end %>
-</div>
-
-<%= link_to "Back", root_path, class: "btn btn-default" %>
+	<div class="row">
+		<div id="post_title">
+			<h1><%= @post.title %></h1>
+		</div>
+	</div>
+	<div id="post_body" class="row col-md-6 col-md-offset-3">
+		<div>
+			<%= simple_format(@post.body) %>
+		</div>
+	</div>
+	<div class="row center-block" style="width:200px">
+		<div class="post_navigation_links">
+			<% if current_user.try(:admin?) %>
+				<%= link_to "Edit Post", edit_post_path(@post) %>
+				<%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row center-block" style="width:60px">
+		<div>
+			<%= link_to "Back", root_path, class: "btn btn-default" %>
+		</div>
+	</div>
+</div>	

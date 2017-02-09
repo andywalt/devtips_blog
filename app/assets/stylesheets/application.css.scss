@@ -35,6 +35,10 @@
 	}
 }
 
+body {
+	padding-top: 51px;
+}
+
 #logo {
 	margin: 0;
 	padding: 0;
@@ -54,7 +58,16 @@
 	
 }
 
-.nav.navbar-nav.navbar-right.nav-pills {
+.nav.navbar-nav.navbar-right {
+	a:link, a:visited, a:active, {
+		color: #F0F0F0;
+	}
+	a:hover {
+		color: #C4C4C4;
+		text-decoration: underline;
+	}
+}
+.nav.navbar-nav.pull-right {
 	a:link, a:visited, a:active, {
 		color: #F0F0F0;
 	}
@@ -94,7 +107,7 @@
 	max-width: 50px;
 }
 
-.row {
+#footer_box {
 	background-color: #2B2B2B;
 	padding: 2rem 0;
 	text-align: center;
