@@ -27,12 +27,14 @@
   </div>
   
   <div class="field">
+      <%= f.label :Profile_Picture %><br />
       <%= f.file_field :avatar %>
   </div>
+  <br />
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<br />

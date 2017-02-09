@@ -18,17 +18,24 @@
     </div>
   <% end %>
 
- 	<header class="navbar navbar-default" role="navigation">
+ 	<header class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to image_tag("logos/AW_logo_circle_hover.png", size: "50x50"), new_user_session_path %></div>
+        <div id="logo" class="navbar-brand"><%= link_to image_tag("logos/AW_logo_circle_hover.png", size: "50x50"), root_path %></div>
         <div id="site-title" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? %>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right nav-pills">
               <li id="avatar-thumb"><%= image_tag current_user.avatar(:thumb), class:"img-responsive img-circle" %></li>
               <li><%= link_to current_user.username %></li>
-              <li><%= link_to("Profile", edit_user_registration_path) %></li>
+              <li id="fat-menu" class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to("Edit Profile", edit_user_registration_path) %></li>
+                </ul>
+              </li>
               <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
             </ul>
           <% else %>
@@ -43,7 +50,9 @@
   </header>
 
   <div class="bannerhelp">
-    <%= render 'layouts/landing' %>
+    <% if current_page?(root_path) %>
+      <%= render 'layouts/landing' %>
+    <% end %>
   </div>
 
 

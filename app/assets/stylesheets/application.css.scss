@@ -54,12 +54,38 @@
 	
 }
 
-.nav.navbar-nav.navbar-right {
+.nav.navbar-nav.navbar-right.nav-pills {
 	a:link, a:visited, a:active, {
 		color: #F0F0F0;
 	}
 	a:hover {
 		color: #C4C4C4;
+		text-decoration: underline;
+	}
+}
+
+.dropdown-menu {
+	background-color: #2B2B2B;
+	a:link, a:visited, a:active, {
+		color: #F0F0F0;
+	}
+	a:hover {
+		color: #C4C4C4;
+		background-color: #2B2B2B;
+		text-decoration: underline;
+	}
+
+}
+
+#fat-menu {
+	background-color: #2B2B2B;
+	a:link, a:visited, a:active, {
+		color: #F0F0F0;
+		background-color: #2B2B2B;
+	}
+	a:hover {
+		color: #C4C4C4;
+		background-color: #2B2B2B;
 		text-decoration: underline;
 	}
 }
@@ -74,6 +100,7 @@
 	text-align: center;
 	a:link, a:visited, a:active, {
 		color: #F0F0F0;
+		text-decoration: underline;
 	}
 	a:hover {
 		color: #C4C4C4;
