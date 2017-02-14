@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse">
           <% if user_signed_in? %>
             <ul class="nav navbar-nav navbar-right nav-pills pull-right">
-              <li id="avatar-thumb"><%= image_tag current_user.avatar(:thumb), class:"img-responsive img-circle" %></li>
+              <li id="avatar-thumb"><%= image_tag current_user.avatar.url(:thumb), class:"img-responsive img-circle" %></li>
               <li><%= link_to current_user.username %></li>
               <li id="fat-menu" class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile
