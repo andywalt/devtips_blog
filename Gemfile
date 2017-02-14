@@ -58,8 +58,15 @@ group :production do
 	gem 'rails_12factor'
 end
 
+# Use Devis for User creation and Admin control.
 gem 'devise', '~> 4.2'
 
+# Use Acts as Votable for post like button.
 gem 'acts_as_votable', '~> 0.10.0'
 
+ # Use paperclip gem to add photos.
 gem 'paperclip', '~> 5.1'
+
+# Connect Paperclip gem to Amazon AWS S3
+gem 'aws-sdk', '~> 2.3'
+
