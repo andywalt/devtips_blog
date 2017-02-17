@@ -1,7 +1,13 @@
-<h1>Edit Post</h1>
+<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+		<h1 class="col-md-8 col-md-offset-2">Edit Post</h1>
 
-<%= render 'form' %>
+		<%= image_tag @post.image.url(:medium) %>
 
-<div class="post_navigation_links">
-	<%= link_to "Back", root_path, class: "btn btn-default" %>
+		<%= render 'form' %>
+
+		<div class="post_navigation_links">
+			<%= link_to "Back", root_path, class: "btn btn-default" %>
+		</div>
+	</div>
 </div>

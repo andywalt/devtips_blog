@@ -36,6 +36,10 @@
         <div class="collapse navbar-collapse">
           <% if user_signed_in? %>
             <ul class="nav navbar-nav navbar-right nav-pills pull-right">
+              <li><% if current_user.try(:admin?) %>
+                    <%= link_to "New Post", new_post_path %>
+                  <% end %>
+              </li>
               <li id="avatar-thumb"><%= image_tag current_user.avatar.url(:thumb), class:"img-responsive img-circle" %></li>
               <li><%= link_to current_user.username %></li>
               <li id="fat-menu" class="dropdown">
@@ -66,9 +70,8 @@
   </div>
 
 
-  <div id="main" class="container">
-        <%= yield %>
-  </div>
+  
+  <%= yield %>
 
   <div>
     <%= render 'layouts/footer' %>

@@ -1,7 +1,7 @@
 <%= form_for @post, html: { multipart: true } do |f| %>
 	<div class="form_group">
 		<label for="image">Post Image</label>
-		<%= f.file_field :image, class: "form-control" %><br>
+		<%= f.file_field :image, class: "form-control image_adjustment" %><br>
 	</div><br>
 
 	<div class="form_group">

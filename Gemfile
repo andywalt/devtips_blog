@@ -70,3 +70,6 @@ gem 'paperclip', '~> 5.1'
 # Connect Paperclip gem to Amazon AWS S3
 gem 'aws-sdk', '~> 2.3'
 
+# Add Masonry to Posts for scaling post layout.
+gem 'masonry-rails', '~> 0.2.4'
+
