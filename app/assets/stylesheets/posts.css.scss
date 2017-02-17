@@ -19,8 +19,6 @@
 }
 
 #posts {
-	margin: 0 auto;
-	width: 100%;
 	a:link, a:visited, a:hover, a:active, {
 				color: #000000;
 			}
@@ -31,13 +29,15 @@
 		}
 	.box {
 		margin: 10px;
-		width: 350px;
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-		border-radius: 7px;
+		width: 200px;
+		padding: 0 0 0 0;
+		border-radius: 10px;
 		text-align: center;
 		img {
 			max-width: 100%;
 			height: auto;
+			padding-bottom: 10px;
+			border-radius: 10px;
 		}
 	}
 }
