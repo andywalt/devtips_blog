@@ -70,7 +70,9 @@
   </div>
 
   <div class="about_Andy">
-    <%= render 'layouts/about' %>
+     <% if current_page?(root_path) %>
+      <%= render 'layouts/about' %>
+    <% end %>
   </div>
 
 
