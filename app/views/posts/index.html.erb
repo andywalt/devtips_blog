@@ -1,5 +1,8 @@
-<div class="container">
-	<div id="posts" class="transitions-enabled clearfix">
+<div class="container-fluid">
+	<h1 class="col-md-10" id="blog_heading">The Blog</h1>
+</div>
+<div class="container-fluid" id="blog_body">
+	<div id="posts" class="transitions-enabled col-sm-12 col-sm-offset-0 col-xs-6 col-xs-offset-2 clearfix">
 		<% @posts.each do |post| %>
 			<div class="box panel panel-default">
 				<%= link_to (image_tag post.image.url(:medium)), post, class: "img-responsive center-block" %>

@@ -1,0 +1,38 @@
+<section class="container-fluid" id="aboutpage">
+	<% if user_signed_in? %>
+	<div class="col-md-12">
+	  <h1>Thank you, @<%= current_user.username %>, for following the Andy in SF Adventure!</h1>
+	</div>
+	<% else %>
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-12">
+	  			<h1 id="what_about">What is "Andy in SF" about?</h1>
+	  			<h5 id="glad">I'm so glad you asked.</h5>
+	  		</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-12" id="three_pane_story">
+	  			<div class="col-md-4">
+	  				<h2>DFW</h2>
+	  				<%= image_tag("DallasSkyline_square.JPG", size: "200x200", class: "img-responsive center-block") %>
+	  				<p>Once upon a time, I was living in Dallas, TX. I liked it a lot but knew there was something more.</p>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<h2>SFO</h2>
+	  				<%= image_tag("sf_square.jpg", size: "200x200", class: "img-responsive center-block") %>
+	  				<p>A good friend started telling me about the beautiful city of San Francisco, CA. I started checking it out and I kind of fell in love with it.</p>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<h2>SOZO</h2>
+	  				<%= link_to image_tag("sozo_mark.png", size: "200x200"), "https://sozo.co", :target => "_blank", class: "img-responsive center-block" %>
+	  				<p>I wanted to be a part of something awesome and something new. So I'm helping launch Sozo Church.</p>
+	  			</div>
+	  		</div>
+  		</div>
+  		<div>
+  			<h3>This is where I'll be sharing stories and reports of all the cool stuff that is happening in San Francsico!</h1>
+  		</div>
+	</div>
+	<% end %>
+</section>
