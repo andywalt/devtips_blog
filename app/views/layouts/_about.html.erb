@@ -1,35 +1,21 @@
-<section class="container-fluid" id="aboutpage">
+<section class="container-fluid" id="about_page">
 	<% if user_signed_in? %>
-	<div class="col-sm-12">
+	<div class="col-sm-12 thank_you">
 	  <h1>Thank you for following the Andy in SF Adventure!</h1>
 	</div>
 	<% else %>
-	<div class="col-sm-12">
+	<div class="container-fluid" id="about_banner">
 		<div class="row">
-			<div class="col-sm-12">
-	  			<h1 id="what_about">What is "Andy in SF" about?</h1>
-	  			<h5 id="glad">I'm so glad you asked.</h5>
+	  		<div class="col-sm-12">
+	  			<%= image_tag("darkprofile", class: "col-sm-4 img-responsive center-block andy_profile") %>
+	  			<div class="col-sm-4" id="what_about">
+	  				<h1>What is "Andy in SF"?</h1>
+	  				<h5 id="glad">I'm so glad you asked.</h5>
+	  				<h3>This is where I'll be sharing stories and reports of all the cool stuff that is happening in San Francisco!<br /><br />Mostly, it's a fun way of updating my mom on what is happening so she doesn't worry!</h3>
+	  				<h5 id="read_the_stuff">So stay up to date by reading all the stuff below!</h5>
+	  			</div>
+	  			<%= image_tag("andy_in_the_bay", class: "col-sm-4 img-responsive center-block andy_profile") %>
 	  		</div>
-  		</div>
-  		<div class="row">
-  			<div class="col-sm-12">
-	  			<div class="three_pane_story" id="dfw">
-	  				<h2>Dallas, TX</h2>
-	  				<p id="dfw_pane_story">Once upon a time, this Louisiana boy, was living in Dallas, TX. I liked it a lot but knew there was something more.</p>
-	  			</div>
-	  			<div class="three_pane_story" id="sfo">
-	  				<h2>San Francisco, CA</h2>
-	  				<p id="dfw_pane_story">A friend started telling me about the city of San Francisco, CA. I started checking it out and I kind of fell in love with it.</p>
-	  			</div>
-	  			<div class="three_pane_story" id="sozo">
-	  				<h2>Sozo Church</h2>
-	  				<%= link_to image_tag("sozo_square.png", size: "150x150"), "https://sozo.co", :target => "_blank", class: "img-responsive center-block" %>
-	  				<p class="pane_story">I wanted to be a part of something awesome and something new. So I'm helping launch <a href="http://sozo.co" target="_blank">Sozo Church.</a></p>
-	  			</div>
-	  		</div>
-  		</div>
-  		<div>
-  			<h3>This is where I'll be sharing stories and reports of all the cool stuff that is happening in San Francsico!</h1>
   		</div>
 	</div>
 	<% end %>

@@ -27,3 +27,7 @@ setTimeout(function(){
 });
 
 $('.dropdown-toggle').dropdown()
+
+$('body').scrollspy({ target: '#about', })
+$('body').scrollspy({ target: '#blog', })
+

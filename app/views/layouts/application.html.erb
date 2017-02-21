@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
   <% if notice %>
     <div id="notice_wrapper">
       <p class="notice"><%= notice %></p>
@@ -24,6 +24,9 @@
       <div class="navbar-inner">
         <div id="logo" class="navbar-brand hidden-xs"><%= link_to image_tag("logos/AW_logo_circle_hover.png", size: "50x50"), root_path %></div>
         <div id="site-title" class="navbar-brand"><%= link_to "Andy in SF", root_path %></div>
+        <div class="navbar-brand" id="site-title"><a href="#about">About</a></div>
+        <div class="navbar-brand" id="site-title"><a href="#blog">Blog</a></div>
+        <div class="navbar-brand" id="site-title"><a href="https://app.moonclerk.com/pay/lkaoogze9ok" target="_blank">Give</a></div>
         <div class="navbar-header navbar-right">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle Navigation</span>
@@ -69,14 +72,18 @@
     <% end %>
   </div>
 
-  <div class="about_Andy">
-     <% if current_page?(root_path) %>
-      <%= render 'layouts/about' %>
-    <% end %>
+  <div class="mainbody">
+    <div class="container-fluid" id="about">
+       <% if current_page?(root_path) %>
+        <%= render 'layouts/about' %>
+      <% end %>
+    </div>
+
+
+    <div id="blog">
+      <%= yield %>
+    </div>
   </div>
-
-
-  <%= yield %>
 
   <div>
     <%= render 'layouts/footer' %>

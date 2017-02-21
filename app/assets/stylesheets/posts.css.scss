@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#blog_area {
+	background-color: #F5F5F5;
+}
+
 .post_navigation_links {
 	a:link, a:visited, a:hover, a:active, {
 		color: #303030;

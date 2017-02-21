@@ -43,6 +43,7 @@
 
 body {
 	padding-top: 51px;
+	postion: relative;
 }
 
 #logo {
@@ -139,4 +140,24 @@ body {
 	a:hover {
 		color: #F0F0F0;
 	}
+}
+
+#about:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -71px;
+  height: 71px;
+  visibility: hidden; 
+}
+
+#blog:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -71px;
+  height: 71px;
+  visibility: hidden; 
+}
+
+#about {
+	padding: 0;
 }
