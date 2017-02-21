@@ -1,32 +1,30 @@
 <section class="container-fluid" id="aboutpage">
 	<% if user_signed_in? %>
-	<div class="col-md-12">
+	<div class="col-sm-12">
 	  <h1>Thank you for following the Andy in SF Adventure!</h1>
 	</div>
 	<% else %>
-	<div class="col-md-12">
+	<div class="col-sm-12">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-sm-12">
 	  			<h1 id="what_about">What is "Andy in SF" about?</h1>
 	  			<h5 id="glad">I'm so glad you asked.</h5>
 	  		</div>
   		</div>
   		<div class="row">
-  			<div class="col-md-12" id="three_pane_story">
-	  			<div class="col-md-4">
-	  				<h2>DFW</h2>
-	  				<%= image_tag("DallasSkyline_square.JPG", size: "200x200", class: "img-responsive center-block") %>
-	  				<p>Once upon a time, I was living in Dallas, TX. I liked it a lot but knew there was something more.</p>
+  			<div class="col-sm-12">
+	  			<div class="three_pane_story" id="dfw">
+	  				<h2>Dallas, TX</h2>
+	  				<p id="dfw_pane_story">Once upon a time, this Louisiana boy, was living in Dallas, TX. I liked it a lot but knew there was something more.</p>
 	  			</div>
-	  			<div class="col-md-4">
-	  				<h2>SFO</h2>
-	  				<%= image_tag("sf_square.jpg", size: "200x200", class: "img-responsive center-block") %>
-	  				<p>A good friend started telling me about the beautiful city of San Francisco, CA. I started checking it out and I kind of fell in love with it.</p>
+	  			<div class="three_pane_story" id="sfo">
+	  				<h2>San Francisco, CA</h2>
+	  				<p id="dfw_pane_story">A friend started telling me about the city of San Francisco, CA. I started checking it out and I kind of fell in love with it.</p>
 	  			</div>
-	  			<div class="col-md-4">
-	  				<h2>SOZO</h2>
-	  				<%= link_to image_tag("sozo_square.png", size: "200x200"), "https://sozo.co", :target => "_blank", class: "img-responsive center-block" %>
-	  				<p>I wanted to be a part of something awesome and something new. So I'm helping launch Sozo Church.</p>
+	  			<div class="three_pane_story" id="sozo">
+	  				<h2>Sozo Church</h2>
+	  				<%= link_to image_tag("sozo_square.png", size: "150x150"), "https://sozo.co", :target => "_blank", class: "img-responsive center-block" %>
+	  				<p class="pane_story">I wanted to be a part of something awesome and something new. So I'm helping launch <a href="http://sozo.co" target="_blank">Sozo Church.</a></p>
 	  			</div>
 	  		</div>
   		</div>
