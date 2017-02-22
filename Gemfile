@@ -73,3 +73,6 @@ gem 'aws-sdk', '~> 2.3'
 # Add Masonry to Posts for scaling post layout.
 gem 'masonry-rails', '~> 0.2.4'
 
+# Add Paginate to Posts for pages function and multiposts.
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+

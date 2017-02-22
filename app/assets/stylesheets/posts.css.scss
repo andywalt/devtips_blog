@@ -2,18 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 #blog_area {
+	padding: 0px;
 	background-color: #F5F5F5;
 }
+
+#blog_title {
+	padding: 0px 15px 0px 15px;
+}
+
+#paginate_selector {
+	margin-top: -5px;
+	padding: 0px 15px 10px 15px;
+}
+
 
 .post_navigation_links {
 	a:link, a:visited, a:hover, a:active, {
 		color: #303030;
 	}
-}
-
-.col-xs-1 {
-	padding-top: 20px;
 }
 
 .crud_links {
@@ -32,8 +40,8 @@
 			text-align: center;
 		}
 	.box {
-		margin: 10px;
-		width: 250px;
+		margin: 10px 15px 10px 15px;
+		width: 275px;
 		padding: 0 0 0 0;
 		border-radius: 10px;
 		border-color: #696969;
@@ -49,6 +57,10 @@
 
 .panel {
 	display: inline-block;
+}
+
+#panel_body {
+	height: 125px;
 }
 
 .post_body {
