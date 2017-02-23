@@ -76,3 +76,11 @@ gem 'masonry-rails', '~> 0.2.4'
 # Add Paginate to Posts for pages function and multiposts.
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 
+# Add Gibbon for Mailchimp sign up.
+gem 'gibbon', '~> 3.0', '>= 3.0.1'
+
+# Add dotenv for API Key hiding.
+gem 'dotenv-rails', '~> 2.2', :groups => [:development]
+
+# Add Sucker Punch for background Job Processing.
+gem 'sucker_punch', '~> 2.0', '>= 2.0.2'
