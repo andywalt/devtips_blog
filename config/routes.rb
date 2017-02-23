@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   		
   root to: 'posts#index'
 
-  root 'emailapi#index'
+  get "/:newsletter" => 'emailapi#newsletter'
   post 'emailapi/subscribe' => 'emailapi#subscribe'
   
 end

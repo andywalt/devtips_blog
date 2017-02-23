@@ -8,7 +8,6 @@ class SubscribeUserToMailingListJob < ActiveJob::Base
 		gb.lists.subscribe({
 			:id => ENV["MAILCHIMP_LIST_ID"], 
 			:email => {:email => user.email},
-			:status => "subscribed",
 			:double_optin => false
 			})
 	end
