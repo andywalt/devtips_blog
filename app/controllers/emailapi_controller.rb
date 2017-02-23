@@ -7,7 +7,7 @@ class EmailapiController < ApplicationController
 		gb = Gibbon::Request.new
 
 		gb.lists.subscribe({
-			:id => ENV["MAILCHIMP_LIST_ID"],
+			:id => "1367b2dcb8",
 			:email => {:email => params[:email][:address]}
 			})
 		redirect_to root_path
