@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   end
   		
   root to: 'posts#index'
+
+  root 'emailapi#index'
+  post 'emailapi/subscribe' => 'emailapi#subscribe'
+  
 end
