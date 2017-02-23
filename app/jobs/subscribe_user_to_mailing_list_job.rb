@@ -4,9 +4,9 @@ class SubscribeUserToMailingListJob < ActiveJob::Base
 	queue_as :default
 
 	def perform(user)
-		gb = Gibbon::Request.new(ENV["MAILCHIMP_API_KEY"])
+		gb = Gibbon::Request.new(ENV[:api_key])
 		gb.lists.subscribe({
-			:id => ENV["MAILCHIMP_LIST_ID"], 
+			:id => "1367b2dcb8", 
 			:email => {:email => user.email},
 			:double_optin => false
 			})
