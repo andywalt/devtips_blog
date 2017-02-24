@@ -8,7 +8,7 @@ class EmailapiController < ApplicationController
 
 		gb.lists("1367b2dcb8").members.create(
 			body: {
-				email_address: => :email,
+				email_address: user.email_address,
 				status: "subscribed",
 				})
 		redirect_to root_path
