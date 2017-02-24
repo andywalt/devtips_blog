@@ -4,11 +4,11 @@ class SubscribeUserToMailingListJob < ActiveJob::Base
 	queue_as :default
 
 	def perform(user)
-		gb = Gibbon::Request.new(ENV[:api_key])
-		gb.lists.subscribe({
-			:id => "1367b2dcb8", 
-			:email => {:email => user.email},
-			:double_optin => false
-			})
+		gibbon = Gibbon::Request.new(api_key: "7fd5c6c2ae53985888bbfa8a2ab149f6-us14")
+		gibbon.lists.("1367b2dcb8").members.create(
+			body: {
+				email_address: user.email_address,
+				status: "subscribed"
+				})
 	end
 end
