@@ -4,13 +4,16 @@ class EmailapiController < ApplicationController
 	end
 
 	def subscribe
-		gibbon = Gibbon::Request.new(api_key: "7fd5c6c2ae53985888bbfa8a2ab149f6-us14")
+		email = params[:email][:address]
 
-		gibbon.lists("1367b2dcb8").members.create(
+		gb = Gibbon::Request.new(api_key: "7fd5c6c2ae53985888bbfa8a2ab149f6-us14")
+
+		gb.lists("1367b2dcb8").members.create(
 			body: {
-				email_address: 'email',
+				email_address: email,
 				status: "subscribed",
 				})
 		redirect_to root_path
+
 	end
 end
