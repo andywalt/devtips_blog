@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'infos/profile'
+
+  get 'infos/contact'
+
   devise_for :users
   resources :posts
 

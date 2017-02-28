@@ -45,7 +45,7 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li><%= link_to current_user.username %></li>
+                    <li><%= link_to "@" + current_user.username, 'infos/profile' %></li>
                     <li><%= link_to("Edit Profile", edit_user_registration_path) %></li>
                     <li>
                       <% if current_user.try(:admin?) %>

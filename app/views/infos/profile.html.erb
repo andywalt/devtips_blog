@@ -1,0 +1,10 @@
+<div class="container-fluid" style="text-align:center" id="profile_page">
+	<div class="col-sm-6 col-sm-offset-3">
+	    <%= image_tag current_user.avatar(:medium), class:"img-responsive img-circle center-block" %></br>
+	    <h1><%= "@" + current_user.username %></h1>
+	    <h4><%= current_user.email %></h4>
+	    <h5><%= link_to("Edit Profile", edit_user_registration_path) %></h5>
+	    <h2><%= link_to "Home", root_path, class: "btn btn-default" %></h2>
+	</div>
+</div>
+
