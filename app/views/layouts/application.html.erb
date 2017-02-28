@@ -4,7 +4,7 @@
     <title>Andy in SF</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Heebo:300,400,700', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
@@ -40,12 +40,12 @@
           <% if user_signed_in? %>
             <ul class="nav navbar-nav navbar-right nav-pills pull-right">
               <li id="avatar-thumb"><%= image_tag current_user.avatar.url(:thumb), class:"img-responsive img-circle" %></li>
-              <li><%= link_to current_user.username %></li>
               <li id="fat-menu" class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
+                    <li><%= link_to current_user.username %></li>
                     <li><%= link_to("Edit Profile", edit_user_registration_path) %></li>
                     <li>
                       <% if current_user.try(:admin?) %>

@@ -1,24 +1,29 @@
 
 #about_page {
-	padding: 0px 0px 0px 15px;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
 	background-color: #1C1C1C;
 	color: #D1D1D1;
+	text-align: left;
 }
 
-.andy_profile {
+.col-sm-3.img-responsive.center-block {
+	padding: 0px;
+}
+
+#andy_profile {
 	opacity: 0.75;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#whatis {
+	text-align: center;
 }
 
 #glad {
 	margin-top: -10px;
 	font-style: italic;
-}
-
-h3 {
-	text-align: center;
-}
-
-#what_about {
 	text-align: center;
 }
 
@@ -26,6 +31,45 @@ h3 {
 	font-style: italic;
 }
 
-.thank_you {
-	text-align: center;
+#photo_icon {
+	float: left;
+	height: 60px;
+	width: auto;
+	padding: 5px 10px 5px 5px;
+}
+
+#about_where {
+	padding: 7px 5px 5px 5px;
+	margin: 5px 45px 5px 75px;
+	text-align: justify;
+	font-weight: 300;
+}
+
+#journal_icon {
+	float: left;
+	height: 60px;
+	width: auto;
+	padding: 5px 10px 5px 5px;
+}
+
+#about_mom {
+	padding: 7px 5px 5px 5px;
+	margin: 5px 45px 5px 75px;
+	text-align: justify;
+	font-weight: 300;
+}
+
+#footsteps_icon {
+	float: left;
+	height: 60px;
+	width: auto;
+	padding: 5px 10px 5px 5px;
+}
+
+
+#about_touch {
+	padding: 7px 5px 5px 5px;
+	margin: 5px 45px 5px 75px;
+	text-align: justify;
+	font-weight: 300;
 }
