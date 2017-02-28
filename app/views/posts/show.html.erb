@@ -4,12 +4,12 @@
 			<%= image_tag @post.image.url(:medium), class: "img-responsive center-block", id: "post_header_image" %>
 		</div>
 	</div>
-	<div class="row">
+	<div class="col-md-6 col-md-offset-3">
 		<div id="post_title">
 			<h1><%= @post.title %></h1>
 		</div>
 	</div>
-	<div id="post_body" class="row col-md-6 col-md-offset-3">
+	<div id="post_body" class="row col-sm-6 col-sm-offset-3">
 		<div>
 			<%= simple_format(@post.body) %>
 		</div>
@@ -22,9 +22,11 @@
 			<% end %>
 		</div>
 	</div>
-	<div class="row center-block" style="width:60px">
-		<div>
-			<%= link_to "Back", root_path, class: "btn btn-default" %>
+	<div class="row center-block" id="response_box">
+		<div class="col-sm-offset-3">
+			<div class="col-sm-4 col-xs-6 col-xs-offset-0"><%= link_to "I read it & wish you well!", root_path, class: "btn btn-default", :id => "read_wish" %></div>
+			<div class="col-sm-4 col-xs-6 col-xs-offset-0"><%= link_to "I read it & want to help!", "https://app.moonclerk.com/pay/lkaoogze9ok", class: "btn btn-default", :id => "read_help" %></div>
 		</div>
 	</div>
+	<br />
 </div>	

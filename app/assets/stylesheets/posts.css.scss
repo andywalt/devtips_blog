@@ -90,9 +90,24 @@
 }
 
 #post_header_image {
-	padding-top: 30px;
+	margin-top: 30px;
+	border-radius: 10px;
+	-webkit-box-shadow: 6px 6px 11px 0px rgba(105,105,105,0.67);
+	-moz-box-shadow: 6px 6px 11px 0px rgba(105,105,105,0.67);
+	box-shadow: 6px 6px 11px 0px rgba(105,105,105,0.67);
 }
 
 #post_body {
 	text-align: justify;
+}
+
+
+#read_wish {
+	margin: 2px 25px 2px 25px;
+	width: 175px;
+}
+
+#read_help {
+	margin: 2px 25px 2px 25px;
+	width: 175px;
 }
