@@ -113,7 +113,7 @@
 	width: 175px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 736px) and (min-device-width: 414px) {
 	#blog_title {
 		margin-left: auto;
 		margin-right: auto;
