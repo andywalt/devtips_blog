@@ -45,6 +45,7 @@
 			font-size: 25px;
 			font-weight: 400;
 			text-align: center;
+			line-height: 115%;
 		}
 	.box {
 		margin: 10px 15px 10px 15px;
@@ -110,4 +111,31 @@
 #read_help {
 	margin: 2px 25px 2px 25px;
 	width: 175px;
+}
+
+@media only screen and (max-width: 600px) {
+	#blog_title {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	#posts {
+		margin-left: 20%;
+		margin-right: 20%;
+		text-align: center;
+		a.post_title:link, a.post_title:visited, a.post_title:hover, a.post_title:active, {
+				color: #2B2B2B;
+				display: inline-block;
+				margin: 5px 5px 0px 5px;
+				}
+		#panel_body {
+			padding: 0 15px 5px 15px;
+			height: auto;
+		}
+	}
+	#paginate_selector {
+		display: inline-block;
+		margin-left: 25%;
+		margin-right: 25%;
+	}
 }
