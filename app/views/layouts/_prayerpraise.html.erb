@@ -1,0 +1,34 @@
+<section class="container-fluid prayer_praise_section">
+	<% if user_signed_in? %>
+	<div class="reportbox">
+		<h2>Prayer</h2>
+		<h5>Prayer is essential in this ongoing warfare. Pray hard and long. Pray for your brothers and sisters. <b>Ephesians 6:18</b></h5>
+		<h4>&#9670;&ensp;Salvations&ensp;&#9670;</h4>
+		<p>Ask that God would use me to introduce people to Him in the Bay Area.<p>
+		<h4>&#9670;&ensp;Sozo Church&ensp;&#9670;</h4>
+		<p>Pray for the Launch in September 2017 <br />(<a href="https://www.sozo.co/get-involved/prayer-topics">Sozo Church Prayer List</a>)<p>
+		<h4>&#9670;&ensp;Provision&ensp;&#9670;</h4>
+		<p>Ask that God would continue to show His provision through people's partnership.<p>
+		<h4>&#9670;&ensp;Development Opportunites&ensp;&#9670;</h4>
+		<p>Pray doors would open to make amazing websites for clients through <a href="https://www.sightsstudios.com">Sights Studios</a>.<p>
+	</div>
+	<div class="instagrambox">
+		<%= link_to image_tag("https://s3.amazonaws.com/andyinsfimages/instagram_profile.png", class: "img-responsive", id: "instagram_profile"), "https://www.instagram.com/andywalt/", :target => "_blank" %>
+		<%= link_to image_tag('https://s3.amazonaws.com/andyinsfimages/Icons/instagram_button_block.png'), "https://www.instagram.com/andywalt/", :target => "_blank", class: "instagram_button_block" %>
+	</div>
+	<div class="reportbox">
+		<h2>Praise</h2>
+		<h5>Sing praise-songs to God. He’s done it all! Let the whole earth know what he’s done! <br /><b>Isaiah 12:5</b></h5>
+		<h4>&#9670;&ensp;Miracles&ensp;&#9670;</h4>
+		<p>From provision to healing, God has been doing amazing things!<p>
+		<h4>&#9670;&ensp;Untangling Knots&ensp;&#9670;</h4>
+		<p>I've had multiple meetings helping people far from God experience God's scandalous grace (mostly people raised in the South visiting SF)!</p>
+		<h4>&#9670;&ensp;Food &amp; Coffee&ensp;&#9670;</h4>
+		<p>God keeps opening the door for amazing connections &amp; generosity at coffee shops &amp; restaurants here!</p>
+	</div>
+	<% else %>
+	<div class="col-sm-12" id="prayer_praise_signup">
+	  <h1 class="get_signed_up">If you want to stay updated with how you can help &amp; the amazing things that are happening in San Francisco, sign up to access the <br /><a href="users/sign_up">"Prayer &amp; Praise"</a> page!</h1>
+	</div>
+	<% end %>
+</section>
