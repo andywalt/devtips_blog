@@ -51,6 +51,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development do
 	gem 'sqlite3'
   gem 'pry-rails'
+  gem 'rails_real_favicon'
 end
 
 group :production do
