@@ -31,3 +31,9 @@ $('.dropdown-toggle').dropdown()
 $('body').scrollspy({ target: '#about', })
 $('body').scrollspy({ target: '#blog', })
 
+
+$(function() {
+	$('.prayer_praise_title').click(function() {
+		$('.prayer_praise_reveal_area').slideToggle(600);
+	});
+});

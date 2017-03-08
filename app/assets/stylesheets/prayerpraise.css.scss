@@ -2,12 +2,13 @@
 	text-align: center;
 	background-color: #1C1C1C;
 	padding: 0px;
+	color: #1C1C1C;
 }
 
 .reportbox {
 	padding: 0px;
 	margin: 20px 10px 20px 10px;
-	background-color: #FFFFFF;
+	background-color: #fefefe;
 	width: 275px;
 	height: 475px;
 	display: inline-block;
@@ -16,8 +17,8 @@
 	h2 {
 		margin: 25px 75px 10px 75px;
 		padding: 2.5px;
-		background-color: #000000;
-		color: #FFFFFF;
+		background-color: #1C1C1C;
+		color: #fefefe;
 	}
 	h5 {
 		font-style: italic;
@@ -43,7 +44,7 @@
 .instagrambox {
 	padding: 0px;
 	margin: 20px 10px 20px 10px;
-	background-color: #FFFFFF;
+	background-color: #fefefe;
 	width: 275px;
 	height: 475px;
 	display: inline-block;
@@ -72,15 +73,36 @@
 	margin-top: 375px;
 }
 
+.prayer_praise_title {
+	color: #fefefe;
+	text-decoration: underline;
+	border: 2px solid #fefefe;
+	border-radius: 1px;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+.prayer_praise_title:hover {
+	color: #d9d9d9;
+	cursor: pointer;
+	border: 2px solid #d9d9d9;
+}
+
+.prayer_praise_reveal_area {
+	display: none;
+}
+
 .get_signed_up {
-	color: #D1D1D1;
+	color: #d9d9d9;
 }
 #prayer_praise_signup {
 	a:link, a:visited, a:active {
-		color: #696969;
+		color: #d9d9d9;
+		text-decoration: underline;
 	}
 	a:hover {
-		text-decoration: underline;
-		color: #FFFFFF;
+		color: #696969;
 	}
 }
