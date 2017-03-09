@@ -106,3 +106,9 @@
 		color: #696969;
 	}
 }
+
+@media only screen and (max-width: 736px) and (min-device-width: 414px) {
+	.get_signed_up {
+		font-size: 20px;
+	}
+}

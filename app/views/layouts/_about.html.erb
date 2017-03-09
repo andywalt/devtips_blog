@@ -1,7 +1,7 @@
 <section class="container-fluid" id="about_page">
 	<% if user_signed_in? %>
-	<div class="col-sm-12 thank_you">
-	  <h1>Thank you for following the Andy in SF Adventure!</h1>
+	<div class="col-sm-12">
+	  <h1 class="thank_you">Thank you for following the Andy in SF Adventure!</h1>
 	</div>
 	<% else %>
 	<%= image_tag("https://s3.amazonaws.com/andyinsfimages/andy_in_the_bay.jpg", class: "col-sm-3 img-responsive center-block", :id => "andy_profile") %>

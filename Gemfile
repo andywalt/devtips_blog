@@ -59,7 +59,7 @@ group :production do
 	gem 'rails_12factor'
 end
 
-# Use Devis for User creation and Admin control.
+# Use Devise for User creation and Admin control.
 gem 'devise', '~> 4.2'
 
 # Use Acts as Votable for post like button.
